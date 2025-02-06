@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: golang:1.21
+  script:
+    - go run .
+    - go build -o app .
+  artifacts:
+    paths:
+      - app
