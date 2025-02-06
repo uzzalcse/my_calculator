@@ -1,5 +1,6 @@
 stages:
   - build
+  - test
 
 build:
   stage: build
@@ -10,3 +11,9 @@ build:
   artifacts:
     paths:
       - app
+
+test:
+  stage: test
+  image: golang:1.21
+  script:
+    - go test ./...
