@@ -22,7 +22,7 @@ fi
 SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
 
 # Construct the Slack message with formatting
-MESSAGE=":rocket: *Deployment Successful!* :white_check_mark:\n\n$LATEST_CHANGES"
+MESSAGE=":rocket: *Deployment Successful!* :white_check_mark:$LATEST_CHANGES"
 
 # Use jq to properly escape the message as JSON
 ESCAPED_MESSAGE=$(echo "$MESSAGE" | jq -Rs .)
