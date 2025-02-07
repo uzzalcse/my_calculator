@@ -40,6 +40,6 @@ notify_slack:
     - ls -l  # List all files to check if notify_slack.sh exists
     - cat notify_slack.sh  # Show file content for verification
     - chmod +x notify_slack.sh
-    - bash ./notify_slack.sh
+    - sh ./notify_slack.sh
 
   when: on_success  # This line was previously misaligned
