@@ -42,4 +42,4 @@ notify_slack:
     - chmod +x notify_slack.sh
     - sh ./notify_slack.sh
 
-  when: on_success  # This line was previously misaligned
+  when: on_success  
