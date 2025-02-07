@@ -31,19 +31,6 @@ deploy:
   only:
     - main
 
-# notify_slack:
-#   stage: notify
-#   image: alpine
-#   before_script:
-#     - apk add --no-cache curl
-#     - chmod +x notify_slack.sh  # Ensure it's executable
-#   script:
-#     - ./notify_slack.sh
-#   only:
-#     - main
-#   when: on_success
-
-
 notify_slack:
   stage: notify
   image: alpine
@@ -54,4 +41,4 @@ notify_slack:
     - cat notify_slack.sh  # Show file content for verification
     - chmod +x notify_slack.sh
     - ./notify_slack.sh
-    when: on_success
+  when: on_success  # This line was previously misaligned
