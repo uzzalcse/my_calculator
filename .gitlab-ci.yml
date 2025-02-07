@@ -35,7 +35,7 @@ notify_slack:
   stage: notify
   image: alpine
   before_script:
-    - apk add --no-cache curl
+    - apk add --no-cache curl jq  # Install curl and jq
   script:
     - ls -l  # List all files to check if notify_slack.sh exists
     - cat notify_slack.sh  # Show file content for verification
