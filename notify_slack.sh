@@ -24,5 +24,8 @@ SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
 # Construct the Slack message with formatting
 MESSAGE=":rocket: *Deployment Successful!* :white_check_mark:\n\n$LATEST_CHANGES"
 
+# Manually escape the newlines in the message
+ESCAPED_MESSAGE=$(echo "$MESSAGE" | sed ':a;N;$!ba;s/\n/\\n/g')
+
 # Send notification to Slack
-curl -X POST -H 'Content-type: application/json' --data "{\"text\": \"$MESSAGE\"}" $SLACK_WEBHOOK_URL
+curl -X POST -H 'Content-type: application/json' --data "{\"text\": \"$ESCAPED_MESSAGE\"}" $SLACK_WEBHOOK_URL
