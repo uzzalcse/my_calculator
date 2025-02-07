@@ -1,3 +1,23 @@
+## Deploy: 122 (pre-release)
+
+- **Date:** 2025-01-28
+- **Branch:** release/5.2.5
+- **Changelog:**
+- **Feature**
+- [Added Support for StayAndPlay.com](https://projects.w3engineers.com/browse/VRS-10830)
+- **Improvement**
+- **Fix**
+- **Client Notice:**
+- **Request**
+- **Response**
+- **Deployment Instruction:**
+- Set `Version = "5.2.5"` in `conf/app.conf`
+- Create config file `stayandplay.com.conf` in `conf/sites`
+- Add `include sites/stayandplay.com.conf` in `conf/app.conf`
+- Deploy
+
+
+
 ## Deploy: 121 (release)
 
 - **Date:** 2025-02-06
